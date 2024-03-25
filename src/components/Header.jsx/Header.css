@@ -1,0 +1,17 @@
+/* .active {
+    border: 1px solid green;
+    background-color: white;
+    color: green;
+} */
+
+
+.menu li>*:not(ul, .menu-title, details, .btn):active,
+.menu li>*:not(ul, .menu-title, details, .btn).active,
+.menu li>details>summary:active {
+    --tw-bg-opacity: 1;
+    background-color: white;
+    --tw-text-opacity: 1;
+    color: #23BE0A;
+    border: 1px solid #23BE0A;
+    font-weight: 700;
+}

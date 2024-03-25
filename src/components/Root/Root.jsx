@@ -1,13 +1,15 @@
 import { Outlet } from "react-router-dom";
 import Header from "../Header.jsx/Header";
-import Home from "../Home/Home";
 
 
 const Root = () => {
     return (
         <div>
-            <Header></Header>
-            <Outlet></Outlet>
+            <div className="max-w-6xl mx-auto">
+                <Header></Header>
+                <Outlet></Outlet>
+            </div>
+            {/* Footer */}
         </div>
     );
 };
