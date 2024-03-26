@@ -1,0 +1,146 @@
+[
+    {
+        "bookId": 1,
+        "bookName": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "image": "https://i.ibb.co/DgLht7v/to-kill-a-mockingbird-jpeg.jpg",
+        "review": "To Kill a Mockingbird is a powerful portrayal of racial injustice and moral growth in a small Southern town. It's a timeless classic that resonates with readers of all ages. The novel follows the experiences of Scout Finch, a young girl growing up in the 1930s. Through her father, Atticus Finch, a lawyer, Scout learns about empathy, compassion, and the importance of standing up for what is right, even in the face of adversity. Harper Lee's masterful storytelling and vivid characters make To Kill a Mockingbird a must-read for anyone interested in exploring themes of race, morality, and the human condition.",
+        "totalPages": 281,
+        "rating": 4.7,
+        "category": "Fiction",
+        "tags": [
+            "Social Justice",
+            "Coming-of-Age"
+        ],
+        "publisher": "J. B. Lippincott & Co.",
+        "yearOfPublishing": 1960
+    },
+    {
+        "bookId": 2,
+        "bookName": "1984",
+        "author": "George Orwell",
+        "image": "https://i.ibb.co/RH0TQNh/1984.png",
+        "review": "1984 is a dystopian novel that explores the dangers of totalitarianism and the erosion of individual freedoms. It remains a haunting warning about the consequences of unchecked power. Set in a totalitarian society where the government, led by the Party and its enigmatic leader Big Brother, exercises absolute control over every aspect of people's lives, the novel follows Winston Smith, a low-ranking member of the Party, as he begins to question the oppressive regime. Orwell's chilling depiction of surveillance, propaganda, and thought control serves as a stark reminder of the importance of safeguarding individual liberties and resisting authoritarianism.",
+        "totalPages": 328,
+        "rating": 4.8,
+        "category": "Science Fiction",
+        "tags": [
+            "Dystopian",
+            "Political"
+        ],
+        "publisher": "Secker & Warburg",
+        "yearOfPublishing": 1949
+    },
+    {
+        "bookId": 3,
+        "bookName": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "image": "https://i.ibb.co/tzJDs2z/thegreat-Gatsby-copy.jpg",
+        "review": "The Great Gatsby is a classic novel that captures the essence of the roaring twenties in America. It delves into themes of love, wealth, and the pursuit of the American Dream. Set against the backdrop of the Jazz Age, the story follows the enigmatic millionaire Jay Gatsby and his obsession with the beautiful Daisy Buchanan. Through Gatsby's lavish parties, Fitzgerald explores the superficiality and moral decay of the upper class, as well as the elusive nature of the American Dream. With its lyrical prose and vivid imagery, The Great Gatsby remains one of the greatest American novels of all time.",
+        "totalPages": 180,
+        "rating": 4.5,
+        "category": "Fiction",
+        "tags": [
+            "Classic",
+            "Romance"
+        ],
+        "publisher": "Scribner",
+        "yearOfPublishing": 1925
+    },
+    {
+        "bookId": 4,
+        "bookName": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "image": "https://i.ibb.co/j9CZDmd/the-catcher-eye.png",
+        "review": "The Catcher in the Rye is a coming-of-age novel that follows the disillusioned teenager Holden Caulfield as he navigates the complexities of adolescence and society. Told in the first person, the novel is a raw and honest exploration of teenage angst, alienation, and the search for identity. Holden's cynical yet vulnerable voice resonates with readers, capturing the struggles and contradictions of adolescence. J.D. Salinger's timeless classic continues to be relevant today, offering insight into the universal experience of growing up.",
+        "totalPages": 224,
+        "rating": 4.3,
+        "category": "Fiction",
+        "tags": [
+            "Classic",
+            "Young Adult"
+        ],
+        "publisher": "Little, Brown and Company",
+        "yearOfPublishing": 1951
+    },
+    {
+        "bookId": 5,
+        "bookName": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "image": "https://i.ibb.co/18wKVgy/41l-Dvkoklc-L-AC-UF1000-1000-QL80.jpg",
+        "review": "Pride and Prejudice is a timeless romance novel that explores themes of love, class, and social expectations in early 19th-century England. Its wit and charm continue to captivate readers today. The novel follows the Bennet sisters, particularly the strong-willed Elizabeth Bennet, as they navigate the social landscape of Regency-era England. Through Elizabeth's journey of self-discovery and her tumultuous relationship with the brooding Mr. Darcy, Jane Austen crafts a tale of love, misunderstandings, and personal growth. With its sharp social commentary and memorable characters, Pride and Prejudice remains one of the most beloved works of English literature.",
+        "totalPages": 432,
+        "rating": 4.6,
+        "category": "Fiction",
+        "tags": [
+            "Romance",
+            "Classic"
+        ],
+        "publisher": "T. Egerton, Whitehall",
+        "yearOfPublishing": 1813
+    },
+    {
+        "bookId": 6,
+        "bookName": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "image": "https://i.ibb.co/J25bFHx/71q-JNw-A34-YL-AC-UF1000-1000-QL80.png",
+        "review": "The Hobbit is a captivating adventure story that follows the hobbit Bilbo Baggins as he embarks on a quest to reclaim treasure guarded by the dragon Smaug. It's a delightful tale set in the world of Middle-earth. Along the way, Bilbo encounters trolls, elves, and goblins, forming unexpected friendships and facing dangerous challenges. J.R.R. Tolkien's richly imagined world, filled with mythical creatures and epic quests, has enchanted readers of all ages for generations. The Hobbit serves as a prelude to Tolkien's monumental work, The Lord of the Rings, but stands on its own as a beloved classic of fantasy literature.",
+        "totalPages": 310,
+        "rating": 4.9,
+        "category": "Fantasy",
+        "tags": [
+            "Adventure",
+            "Classic"
+        ],
+        "publisher": "Allen & Unwin",
+        "yearOfPublishing": 1937
+    },
+    {
+        "bookId": 7,
+        "bookName": "The Da Vinci Code",
+        "author": "Dan Brown",
+        "image": "https://i.ibb.co/JzWF975/0efd4f7277aa5d503f4d5e69aef7020d.jpg",
+        "review": "The Da Vinci Code is a mystery thriller that follows symbologist Robert Langdon and cryptologist Sophie Neveu as they investigate a murder in the Louvre Museum and uncover a conspiracy that could shake the foundations of Christianity. Brown weaves a complex narrative filled with historical secrets, religious intrigue, and unexpected twists that keep readers on the edge of their seats. The book is meticulously researched, blending fact with fiction to create a gripping story that challenges traditional beliefs and invites readers to question the nature of truth and the power of knowledge. With its fast-paced plot and thought-provoking themes, The Da Vinci Code is a compelling read that continues to captivate audiences around the world.",
+        "totalPages": 464,
+        "rating": 4.5,
+        "category": "Mystery",
+        "tags": [
+            "Thriller",
+            "Conspiracy"
+        ],
+        "publisher": "Doubleday",
+        "yearOfPublishing": 2003
+    },
+    {
+        "bookId": 8,
+        "bookName": "The Power of Now",
+        "author": "Eckhart Tolle",
+        "image": "https://i.ibb.co/wcBbhbM/10-1-57731-480-8-46425-zoom.png",
+        "review": "The Power of Now is a spiritual guidebook that explores the concept of mindfulness and living in the present moment. Eckhart Tolle draws on a mix of Eastern spirituality and Western psychology to present practical techniques for achieving inner peace and enlightenment. Through simple yet profound insights, Tolle encourages readers to release their attachment to past regrets and future anxieties, and instead, embrace the richness of the present moment. The Power of Now has inspired millions of readers to transform their lives and cultivate a deeper sense of awareness and fulfillment.",
+        "totalPages": 236,
+        "rating": 4.7,
+        "category": "Self-Help",
+        "tags": [
+            "Mindfulness",
+            "Spirituality"
+        ],
+        "publisher": "New World Library",
+        "yearOfPublishing": 1997
+    },
+    {
+        "bookId": 9,
+        "bookName": "Sapiens: A Brief History of Humankind",
+        "author": "Yuval Noah Harari",
+        "image": "https://i.ibb.co/tCgrvbJ/237-A0957-copy.jpg",
+        "review": "Sapiens: A Brief History of Humankind offers a sweeping overview of human history, from the emergence of Homo sapiens in Africa to the present day. Yuval Noah Harari examines key milestones in our species' development, including the Cognitive Revolution, the Agricultural Revolution, and the rise of empires and civilizations. Drawing on insights from anthropology, biology, and sociology, Harari challenges conventional narratives about the human past and offers thought-provoking reflections on the future of our species. Sapiens is a fascinating and enlightening read that invites readers to reconsider their understanding of humanity's place in the world.",
+        "totalPages": 443,
+        "rating": 4.8,
+        "category": "Non-Fiction",
+        "tags": [
+            "History",
+            "Anthropology"
+        ],
+        "publisher": "Harper",
+        "yearOfPublishing": 2011
+    }
+]
