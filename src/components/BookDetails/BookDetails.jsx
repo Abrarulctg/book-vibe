@@ -1,22 +1,61 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import './BookDetails.css';
+import { getStoredBooks, markAsRead } from "../utility/LocalStorage";
+import { Bounce, ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 const BookDetails = () => {
     const books = useLoaderData();
     const { bookId } = useParams();
-
+    console.log(bookId);
     const bookIdInt = parseInt(bookId);
-    console.log(books)
+    // console.log(books)
 
     const selectedBook = books.find(book => book.bookId === bookIdInt)
     console.log(selectedBook)
 
     const { image, bookName, author, category, rating, tags, review, totalPages, publisher, yearOfPublishing } = selectedBook;
 
+    //    Success toaster
+    const successToast = () => toast.success('🦄 Wow so easy!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+    });
+    // Error Toaster
+    const errorToast = () => toast.error('🦄This book is already read!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+    });
 
-    const handleMarkAsRead = () => {
-        console.log("btn clicked")
+    const handleMarkAsRead = (bookId) => {
+        const bookIdInt = parseInt(bookId);
+        const storedBookId = getStoredBooks(bookIdInt)
+        // console.log(storedBookId);
+        const matchedBookId = storedBookId.find(storedBkId => storedBkId === bookIdInt);
+        if (matchedBookId === bookIdInt) {
+            errorToast();
+        }
+        else {
+            markAsRead(bookIdInt);
+            successToast();
+        }
     }
+
+
     return (
         <div>
             <div className="flex my-8">
@@ -67,9 +106,10 @@ const BookDetails = () => {
                     </div>
                     {/* button */}
                     <div className="space-x-4">
-                        <button onClick={handleMarkAsRead} className="btn bg-white hover:bg-violet-500 hover:text-white border-violet-400">Read</button>
+                        <button onClick={() => handleMarkAsRead(bookId)} className="btn bg-white hover:bg-violet-500 hover:text-white border-violet-400">Read</button>
                         <button className="btn bg-[#52d2f3] hover:bg-[#50B1C9]">Wishlist</button>
                     </div>
+                    <ToastContainer />
                 </div>
             </div>
         </div>
