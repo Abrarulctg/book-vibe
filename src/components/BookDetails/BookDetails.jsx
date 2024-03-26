@@ -1,6 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import './BookDetails.css';
-import { getStoredBooks, markAsRead } from "../utility/LocalStorage";
+import { addToWishList, getStoredBooks, getWishListedBooks, markAsRead } from "../utility/LocalStorage";
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
@@ -12,12 +12,12 @@ const BookDetails = () => {
     // console.log(books)
 
     const selectedBook = books.find(book => book.bookId === bookIdInt)
-    console.log(selectedBook)
+    // console.log(selectedBook)
 
     const { image, bookName, author, category, rating, tags, review, totalPages, publisher, yearOfPublishing } = selectedBook;
 
-    //    Success toaster
-    const successToast = () => toast.success('🦄 Wow so easy!', {
+    //    Success ReadBtn toaster
+    const successToast = () => toast.success('Successful, The book added to the Read List!', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -28,8 +28,32 @@ const BookDetails = () => {
         theme: "colored",
         transition: Bounce,
     });
-    // Error Toaster
-    const errorToast = () => toast.error('🦄This book is already read!', {
+    //    Success WishlistBtn toaster
+    const successWishListToast = () => toast.success('Successful, The book added to the Wish List!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+    });
+    // Error Read Toaster
+    const errorToast = () => toast.error('You have already read this book!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+    });
+    // Error Wishlist Toaster
+    const errorWishlistBtnToast = () => toast.error('Already added to the Wish List!', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -52,6 +76,33 @@ const BookDetails = () => {
         else {
             markAsRead(bookIdInt);
             successToast();
+        }
+    }
+
+    const handleAddToWishlist = (bookId) => {
+        console.log('btn clicked', bookId)
+        const bookIdInt = parseInt(bookId);
+        const storedBookId = getStoredBooks(bookIdInt)
+        // console.log(storedBookId);
+        const matchedBookId = storedBookId.find(storedBkId => storedBkId === bookIdInt);
+
+        const wishListedBookId = getWishListedBooks(bookIdInt)
+        // console.log('wishlisted Id:', wishListedBookId);
+
+        const matchedWishlistedBookId = wishListedBookId.find(storedWishlistedBookId => storedWishlistedBookId === bookIdInt)
+        // console.log('matched id: ', matchedWishlistedBookId);
+        if (matchedBookId === bookIdInt || matchedWishlistedBookId === bookIdInt) {
+            if (bookIdInt === matchedBookId) {
+                errorToast();
+            }
+            else {
+                errorWishlistBtnToast();
+            }
+        }
+        else {
+            // markAsRead(bookIdInt);
+            successWishListToast();
+            addToWishList(bookIdInt)
         }
     }
 
@@ -107,7 +158,7 @@ const BookDetails = () => {
                     {/* button */}
                     <div className="space-x-4">
                         <button onClick={() => handleMarkAsRead(bookId)} className="btn bg-white hover:bg-violet-500 hover:text-white border-violet-400">Read</button>
-                        <button className="btn bg-[#52d2f3] hover:bg-[#50B1C9]">Wishlist</button>
+                        <button onClick={() => handleAddToWishlist(bookId)} className="btn bg-[#52d2f3] hover:bg-[#50B1C9]">Wishlist</button>
                     </div>
                     <ToastContainer />
                 </div>

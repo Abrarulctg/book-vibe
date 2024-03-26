@@ -13,6 +13,23 @@ const markAsRead = bookId => {
         storedBookIds.push(bookId);
         localStorage.setItem('reads-book', JSON.stringify(storedBookIds))
     }
-
 }
-export { getStoredBooks, markAsRead }
+const getWishListedBooks = () => {
+    const storedBookId = localStorage.getItem('wishlist');
+    if (storedBookId) {
+        return JSON.parse(storedBookId);
+    }
+    return [];
+}
+
+const addToWishList = bookId => {
+    const storedBookIds = getWishListedBooks();
+    const exists = storedBookIds.find(bId => bId === bookId);
+    if (!exists) {
+        storedBookIds.push(bookId);
+        localStorage.setItem('wishlist', JSON.stringify(storedBookIds))
+    }
+}
+
+
+export { getStoredBooks, markAsRead, getWishListedBooks, addToWishList }
