@@ -19,7 +19,7 @@ const Book = ({ book }) => {
                 </div>
                 <h1 className="text-2xl font-bold text-[#131313] mb-4"> {bookName}</h1>
                 <p className="text-base text-[#131313cc] mb-4 font-semibold">By : {author}</p>
-                <hr className="border-2 border-dashed" />
+                <hr className="border-1 border-dashed" />
                 <div className="flex justify-between text-base mt-4">
                     <p>{category}</p>
                     <p className="flex items-center">{rating} <FaRegStar className="ml-2" />
