@@ -80,7 +80,7 @@ const BookDetails = () => {
     }
 
     const handleAddToWishlist = (bookId) => {
-        console.log('btn clicked', bookId)
+        // console.log('btn clicked', bookId)
         const bookIdInt = parseInt(bookId);
         const storedBookId = getStoredBooks(bookIdInt)
         // console.log(storedBookId);
