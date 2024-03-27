@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaRegStar } from "react-icons/fa";
-import PropTypes from 'prop-types'; // ES6
+import PropTypes from 'prop-types';
 
 
 const Book = ({ book }) => {

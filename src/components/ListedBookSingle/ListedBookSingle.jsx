@@ -1,8 +1,8 @@
 import { BsCalendarDate } from "react-icons/bs";
 import { FiUsers } from "react-icons/fi";
 import { MdOutlineFindInPage } from "react-icons/md";
-import { SiBookmeter } from "react-icons/si";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 
 const ListedBookSingle = ({ book }) => {
@@ -39,5 +39,10 @@ const ListedBookSingle = ({ book }) => {
         </div>
     );
 };
+
+
+ListedBookSingle.propTypes = {
+    book: PropTypes.object
+}
 
 export default ListedBookSingle;

@@ -33,20 +33,8 @@ const ListedBooks = () => {
         setDisplayReadListedBooks(readListedBooks);
         setReadListedBooks(readListedBooks);
     }, []);
-    console.log("displaying from state read list", displayReadListedBooks)
+    // console.log("displaying from state read list", displayReadListedBooks)
 
-
-    // Read List Books
-    // const readListedBooks = [];
-    // for (const book of books) {
-    //     // console.log(book)
-    //     for (const id of readListBookId) {
-    //         if (id === book.bookId) {
-    //             readListedBooks.push(book);
-    //         }
-    //     }
-    // }
-    // console.log("readListedBooks", readListedBooks)
 
 
 
@@ -63,19 +51,7 @@ const ListedBooks = () => {
         setWishListedBooks(wishListedBooks);
         setDisplayWishListedBooks(wishListedBooks);
     }, []);
-    console.log("Displaying from state wishlist", displayWishListedBooks);
-
-    // Wishlisted Books
-    // const wishListedBooks = [];
-    // for (const book of books) {
-    //     for (const id of wishlistedBooksId) {
-    //         if (id === book.bookId) {
-    //             wishListedBooks.push(book);
-    //         }
-    //     }
-    // }
-    // console.log("wishListedBooks", wishListedBooks)
-
+    // console.log("Displaying from state wishlist", displayWishListedBooks);
 
 
     return (
