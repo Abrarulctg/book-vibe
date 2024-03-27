@@ -1,41 +1,81 @@
 import { useLoaderData } from "react-router-dom";
 import { getStoredBooks, getWishListedBooks } from "../utility/LocalStorage";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ListedBookSingle from "../ListedBookSingle/ListedBookSingle";
 
 
 const ListedBooks = () => {
-    // const [readListedBook, setReadListedBook] = useState([]);
+    const [readListedBooks, setReadListedBooks] = useState([]);
+    const [displayReadListedBooks, setDisplayReadListedBooks] = useState([]);
+
+    // handling Wishlist Books
+    const [wishListedBooks, setWishListedBooks] = useState([]);
+    const [displayWishListedBooks, setDisplayWishListedBooks] = useState([]);
+
     const books = useLoaderData();
 
-    const readListBookId = getStoredBooks();
-    const wishlistedBooksId = getWishListedBooks();
+    // const readListBookId = getStoredBooks();
+    // const wishlistedBooksId = getWishListedBooks();
 
-    // console.log("wish listed Book:", wishlistedBooksId, "read listed Book:", readListBookId);
+
+
+    useEffect(() => {
+        const readListBookId = getStoredBooks();
+        const readListedBooks = [];
+        for (const book of books) {
+            // console.log(book)
+            for (const id of readListBookId) {
+                if (id === book.bookId) {
+                    readListedBooks.push(book);
+                }
+            }
+        }
+        setDisplayReadListedBooks(readListedBooks);
+        setReadListedBooks(readListedBooks);
+    }, []);
+    console.log("displaying from state read list", displayReadListedBooks)
+
 
     // Read List Books
-    const readListedBooks = [];
-    for (const book of books) {
-        // console.log(book)
-        for (const id of readListBookId) {
-            if (id === book.bookId) {
-                readListedBooks.push(book);
+    // const readListedBooks = [];
+    // for (const book of books) {
+    //     // console.log(book)
+    //     for (const id of readListBookId) {
+    //         if (id === book.bookId) {
+    //             readListedBooks.push(book);
+    //         }
+    //     }
+    // }
+    // console.log("readListedBooks", readListedBooks)
+
+
+
+    useEffect(() => {
+        const wishlistedBooksId = getWishListedBooks();
+        const wishListedBooks = [];
+        for (const book of books) {
+            for (const id of wishlistedBooksId) {
+                if (id === book.bookId) {
+                    wishListedBooks.push(book);
+                }
             }
         }
-    }
-    console.log(readListedBooks)
+        setWishListedBooks(wishListedBooks);
+        setDisplayWishListedBooks(wishListedBooks);
+    }, []);
+    console.log("Displaying from state wishlist", displayWishListedBooks);
 
     // Wishlisted Books
-    const wishListedBooks = [];
-    for (const book of books) {
-        // console.log(book)
-        for (const id of wishlistedBooksId) {
-            if (id === book.bookId) {
-                wishListedBooks.push(book);
-            }
-        }
-    }
-    console.log(wishListedBooks)
+    // const wishListedBooks = [];
+    // for (const book of books) {
+    //     for (const id of wishlistedBooksId) {
+    //         if (id === book.bookId) {
+    //             wishListedBooks.push(book);
+    //         }
+    //     }
+    // }
+    // console.log("wishListedBooks", wishListedBooks)
+
 
 
     return (

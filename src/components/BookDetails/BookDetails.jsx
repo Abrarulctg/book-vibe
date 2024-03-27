@@ -120,6 +120,7 @@ const BookDetails = () => {
                     <p className="text-xl font-[#13131314]">{category}</p>
                     <hr />
                     <p><span className="font-bold">Review: </span>{review}</p>
+                    {/* Tags */}
                     <div className="flex gap-4">
                         <h4 className="font-bold">Tag </h4>
                         {
