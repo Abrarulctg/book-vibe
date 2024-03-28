@@ -2,13 +2,11 @@
 # Live Link: [https://book-vibe-abrar.netlify.app]
 
 # Features:
-<li><p><b>Book Details:</b> Each book listing includes detailed information such as title, author, publisher, publication date,review, rating, and price.</p></li>
+<li><b>Book Details:</b> Each book listing includes detailed information such as title, author, publisher, publication date,review, rating, and price.</li>
 
-
-<p>
-<b>Book Images:</b>
+<li><b>Book Images:</b>
 Display high-quality images of book covers to give users a visual representation of the books.
-</p>
+</li>
  
 <p><b>Wishlist: </b>
 Allow users to create wishlists of books they are interested in purchasing later or share with others.
