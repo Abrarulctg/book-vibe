@@ -1,4 +1,4 @@
-# Project Name: Book Vibe
+# Project Name: <b>Book Vibe</b>
 # Live Link: [https://book-vibe-abrar.netlify.app]
 
 # Features:
@@ -8,21 +8,21 @@
 Display high-quality images of book covers to give users a visual representation of the books.
 </li>
  
-<p><b>Wishlist: </b>
+<li><b>Wishlist: </b>
 Allow users to create wishlists of books they are interested in purchasing later or share with others.
-</p>
-<p><b>Read List: </b>
+</li>
+<li><b>Read List: </b>
 Allow users to create Read List of books they are reads.
-</p>
+</li>
 
-<p><b>Customer Reviews and Ratings:</b>
+<li><b>Customer Reviews and Ratings:</b>
 Enable users to leave reviews and ratings for books they have purchased, helping other customers make informed decisions.
-</p>
+</li>
  
 
-<p><b>Responsive Design:</b>
+<li><b>Responsive Design:</b>
 Ensure the website is optimized for various devices and screen sizes, providing a seamless shopping experience on desktops, laptops, tablets, and smartphones.
-</p>
+</li>
 
  
 
