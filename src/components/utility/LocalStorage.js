@@ -1,3 +1,4 @@
+// for Read list Book
 const getStoredBooks = () => {
     const storedBookId = localStorage.getItem('reads-book');
     if (storedBookId) {
@@ -14,6 +15,9 @@ const markAsRead = bookId => {
         localStorage.setItem('reads-book', JSON.stringify(storedBookIds))
     }
 }
+
+
+// For Wishlist
 const getWishListedBooks = () => {
     const storedBookId = localStorage.getItem('wishlist');
     if (storedBookId) {
@@ -30,6 +34,5 @@ const addToWishList = bookId => {
         localStorage.setItem('wishlist', JSON.stringify(storedBookIds))
     }
 }
-
 
 export { getStoredBooks, markAsRead, getWishListedBooks, addToWishList }

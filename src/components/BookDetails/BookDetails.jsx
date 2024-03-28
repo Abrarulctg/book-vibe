@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 const BookDetails = () => {
     const books = useLoaderData();
     const { bookId } = useParams();
-    console.log(bookId);
+    // console.log(bookId);
     const bookIdInt = parseInt(bookId);
     // console.log(books)
 
@@ -85,10 +85,8 @@ const BookDetails = () => {
         const storedBookId = getStoredBooks(bookIdInt)
         // console.log(storedBookId);
         const matchedBookId = storedBookId.find(storedBkId => storedBkId === bookIdInt);
-
         const wishListedBookId = getWishListedBooks(bookIdInt)
         // console.log('wishlisted Id:', wishListedBookId);
-
         const matchedWishlistedBookId = wishListedBookId.find(storedWishlistedBookId => storedWishlistedBookId === bookIdInt)
         // console.log('matched id: ', matchedWishlistedBookId);
         if (matchedBookId === bookIdInt || matchedWishlistedBookId === bookIdInt) {
