@@ -51,24 +51,25 @@ const ListedBooks = () => {
 
     //////////// Sorting try start  || this code will not effect to main code
     // this ids are called for sorting list
-    const readListBookIds = getStoredBooks();
-    const wishlistedBookIds = getWishListedBooks();
-    console.log("before sort:", readListBookIds)
+    // const readListBookIds = getStoredBooks();
+    // const wishlistedBookIds = getWishListedBooks();
+    // console.log("before sort:", readListBookIds)
 
-    const sortedReadListBookIds = readListBookIds.sort(function (a, b) { return b - a });
-    console.log("after sort:", sortedReadListBookIds)
+    // const sortedReadListBookIds = readListBookIds.sort(function (a, b) { return b - a });
+    // console.log("after sort:", sortedReadListBookIds)
 
-    const sortedBooks = [];
-    const wishListedBooksSort = [];
-    for (const book of books) {
-        for (const id of readListBookIds) {
-            if (id === book.bookId) {
-                wishListedBooksSort.push(book);
-            }
-        }
-    }
-    const { rating } = wishListedBooksSort;
-    console.log(wishListedBooksSort, rating)
+    // const sortedBooks = [];
+    // const wishListedBooksSort = [];
+    // for (const book of books) {
+    //     for (const id of readListBookIds) {
+    //         if (id === book.bookId) {
+    //             wishListedBooksSort.push(book);
+    //         }
+    //     }
+    // }
+    // for(const )
+
+    // console.log(wishListedBooksSort)
     // for (const book of books) {
     //     if (book.totalPages > book[0].totalPages) {
     //         sortedBooks.push(book);
@@ -77,28 +78,28 @@ const ListedBooks = () => {
     // console.log(sortedBooks);
 
     // Function to Sort Data
-    const handleSortBooks = sort => {
-        console.log('btn clicked', sort)
-        if (sort === 'all') {
-            setDisplayReadListedBooks(readListedBooks)
-        }
-        else if (sort === 'rating') {
+    // const handleSortBooks = sort => {
+    //     console.log('btn clicked', sort)
+    //     if (sort === 'all') {
+    //         setDisplayReadListedBooks(readListedBooks)
+    //     }
+    //     else if (sort === 'rating') {
 
-            // const descendingBooksByRating = readListedBooks.rating.sort(function (a, b) { return b - a });
-            // const remoteJobs = readListedBooks.filter(job => job.remote_or_onsite === "Remote")
-            setDisplayReadListedBooks(descendingBooksByRating);
-            console.log(descendingBooksByRating)
-        }
-        else if (sort === 'numberOfPages') {
-            const onsiteJobs = readListedBooks.filter(job => job.remote_or_onsite === "Onsite")
-            setDisplayReadListedBooks(onsiteJobs);
-        }
+    //         // const descendingBooksByRating = readListedBooks.rating.sort(function (a, b) { return b - a });
+    //         // const remoteJobs = readListedBooks.filter(job => job.remote_or_onsite === "Remote")
+    //         setDisplayReadListedBooks(descendingBooksByRating);
+    //         console.log(descendingBooksByRating)
+    //     }
+    //     else if (sort === 'numberOfPages') {
+    //         const onsiteJobs = readListedBooks.filter(job => job.remote_or_onsite === "Onsite")
+    //         setDisplayReadListedBooks(onsiteJobs);
+    //     }
 
 
-        // else {
-        //     setAppliedJobs(appliedJobs)
-        // }
-    }
+    // else {
+    //     setAppliedJobs(appliedJobs)
+    // }
+    // }
 
     ////// sorting end ///////
 
@@ -124,10 +125,10 @@ const ListedBooks = () => {
                 <div className="dropdown w-40">
                     <div tabIndex={0} role="button" className="btn bg-[#23BE0A] text-white font-semibold flex justify-between"><p>Sort By:</p> <IoIosArrowDown /></div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li onClick={() => handleSortBooks('all')}><a>All</a></li>
-                        <li onClick={() => handleSortBooks('rating')} className="bg-white text-black"><button>Rating</button></li>
-                        <li onClick={() => handleSortBooks('numberOfPages')} className="bg-white text-black"><button>Number of Pages</button></li>
-                        <li onClick={() => handleSortBooks('publishedYear')} className="bg-white text-black"><button>Published Year</button></li>
+                        <li ><a>All</a></li>
+                        <li className="bg-white text-black"><button>Rating</button></li>
+                        <li className="bg-white text-black"><button>Number of Pages</button></li>
+                        <li className="bg-white text-black"><button>Published Year</button></li>
                     </ul>
                 </div>
             </div>

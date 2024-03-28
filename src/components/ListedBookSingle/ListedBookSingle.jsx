@@ -17,11 +17,13 @@ const ListedBookSingle = ({ book }) => {
                 <div className="w-full lg:w-9/12 space-y-4">
                     <h1 className="text-2xl font-bold text-[#131313]">{bookName}</h1>
                     <p className="text-base font-[#131313cc] font-[500]">By : {author}</p>
-                    <div className="flex gap-4">
-                        <h4 className="font-bold font-[#191919]">Tag </h4>
-                        {
-                            tags.map((tag, idx) => <button key={idx} className="px-4 bg-[#23be0a0d] text-[#23BE0A] font-semibold rounded-full mr-2">#{tag}</button>)
-                        }
+                    <div className="flex gap-4 flex-col lg:flex-row">
+                        <div className="flex">
+                            <h4 className="font-bold font-[#191919] mr-5">Tag </h4>
+                            {
+                                tags.map((tag, idx) => <button key={idx} className="px-4 bg-[#23be0a0d] text-[#23BE0A] font-semibold rounded-full mr-2">#{tag}</button>)
+                            }
+                        </div>
                         <p className="flex items-center"><BsCalendarDate className="mr-2" /> Year of Publishing: {yearOfPublishing}</p>
                     </div>
                     <div className="flex gap-4 text-base text-[#13131399]">

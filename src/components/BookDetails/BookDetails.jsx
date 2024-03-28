@@ -107,8 +107,8 @@ const BookDetails = () => {
 
     return (
         <div>
-            <div className="flex my-8">
-                <div className="w-2/4 ">
+            <div className="flex my-8 flex-col lg:flex-row items-center">
+                <div className="w-5/6 lg:w-2/4">
                     <img className="w-full p-[74px] bg-[#1313130a] rounded-xl" src={image} alt="" />
                 </div>
                 <div className="w-2/4 space-y-4 p-12">

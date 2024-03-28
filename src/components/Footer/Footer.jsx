@@ -9,7 +9,7 @@ const Footer = () => {
                         <div className="flex justify-center">
                             <h1 className="text-4xl font-extrabold italic mb-4 text-[#12132d]">Book Vibe</h1>
                         </div>
-                        <p className="text-[#12132db3]">At the Chefs Table, diners embark on an extraordinary culinary journey, indulging in an immersive experience that unveils the chefs artistic vision and passion for gastronomy, creating unforgettable moments of culinary delight.
+                        <p className="text-[#12132db3]">Book Vibe is an Online Book selling website allows users to purchase books online, offering a vast selection of titles, simple search functions, secure transactions, and features such as reviews and recommendations for an effortless shopping experience.
                         </p>
                         {/* <!-- social icon container --> */}
                         <div className="flex justify-center my-8 gap-8">

@@ -3,7 +3,7 @@ import SingleBlog from "../SingleBlog/SingleBlog";
 
 const Blog = () => {
     const books = useLoaderData();
-    console.log(books);
+    // console.log(books);
 
     return (
         <div>
