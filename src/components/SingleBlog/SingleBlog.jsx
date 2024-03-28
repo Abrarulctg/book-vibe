@@ -13,6 +13,9 @@ const SingleBlog = ({ book }) => {
                     <p>By: <a href="#" className="text-blue-600 italic">{author}</a></p>
                 </div>
                 <p>{review}</p>
+                <div className='text-center my-5'>
+                    <button className="px-6 py-3 bg-[#23BE0A] text-white rounded-full">View Details</button>
+                </div>
             </div>
         </div>
     );
