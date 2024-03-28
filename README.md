@@ -2,8 +2,8 @@
 # Live Link: [https://book-vibe-abrar.netlify.app]
 
 # Features:
+<li><p><b>Book Details:</b> Each book listing includes detailed information such as title, author, publisher, publication date,review, rating, and price.</p></li>
 
-<p><b>Book Details:</b> Each book listing should include detailed information such as title, author, publisher, publication date, ISBN, synopsis, and price.</p>
 
 <p>
 <b>Book Images:</b>
