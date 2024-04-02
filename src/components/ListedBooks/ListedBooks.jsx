@@ -51,7 +51,76 @@ const ListedBooks = () => {
 
     //////////// Sorting try start  || this code will not effect to main code
     // this ids are called for sorting list
-    // const readListBookIds = getStoredBooks();
+    const readListBookIds = getStoredBooks();
+    const wishListedBooksId = getWishListedBooks();
+    const handleSortByRating = (category) => {
+        const readListedBooks = [];
+        for (const book of books) {
+            // console.log(book)
+            for (const id of readListBookIds) {
+                if (id === book.bookId) {
+                    readListedBooks.push(book);
+                }
+            }
+        }
+        // console.log(readListedBooks);
+        const wishListedBooks = [];
+        for (const book of books) {
+            for (const id of wishListedBooksId) {
+                if (id === book.bookId) {
+                    wishListedBooks.push(book);
+                }
+            }
+        }
+
+        if (category === "all") {
+            setDisplayReadListedBooks(readListedBooks);
+            setDisplayWishListedBooks(wishListedBooks);
+        }
+        if (category === "rating") {
+            readListedBooks.sort((a, b) => {
+                const ratingNum1 = a.rating;
+                const ratingNum2 = b.rating;
+                return ratingNum2 - ratingNum1;
+            })
+            setDisplayReadListedBooks(readListedBooks);
+
+            wishListedBooks.sort((a, b) => {
+                const ratingNum1 = a.rating;
+                const ratingNum2 = b.rating;
+                return ratingNum2 - ratingNum1;
+            })
+            setDisplayWishListedBooks(wishListedBooks);
+        }
+        if (category === "numberOfPages") {
+            readListedBooks.sort((a, b) => {
+                const pagesNum1 = a.totalPages;
+                const pagesNum2 = b.totalPages;
+                return pagesNum2 - pagesNum1;
+            })
+            setDisplayReadListedBooks(readListedBooks)
+            wishListedBooks.sort((a, b) => {
+                const pagesNum1 = a.totalPages;
+                const pagesNum2 = b.totalPages;
+                return pagesNum2 - pagesNum1;
+            })
+            setDisplayWishListedBooks(wishListedBooks)
+        }
+        if (category === "publishedYear") {
+            readListedBooks.sort((a, b) => {
+                const publishedYear1 = a.yearOfPublishing;
+                const publishedYear2 = b.yearOfPublishing;
+                return publishedYear2 - publishedYear1;
+            })
+            wishListedBooks.sort((a, b) => {
+                const publishedYear1 = a.yearOfPublishing;
+                const publishedYear2 = b.yearOfPublishing;
+                return publishedYear2 - publishedYear1;
+            })
+            setDisplayWishListedBooks(wishListedBooks)
+        }
+    }
+
     // const wishlistedBookIds = getWishListedBooks();
     // console.log("before sort:", readListBookIds)
 
@@ -59,14 +128,27 @@ const ListedBooks = () => {
     // console.log("after sort:", sortedReadListBookIds)
 
     // const sortedBooks = [];
-    // const wishListedBooksSort = [];
-    // for (const book of books) {
+    // const readListedBooksSort = [];
+    // // const largestRating = books[0];
+    // for (let i = 0; i < books.length; i++) {
     //     for (const id of readListBookIds) {
-    //         if (id === book.bookId) {
-    //             wishListedBooksSort.push(book);
+    //         if (id === books[i].bookId) {
+    //             if (books[i].rating < 4.) {
+    //                 readListedBooksSort.push(books[i]);
+    //             }
+    //             else if (books[i].rating > 4) {
+    //                 readListedBooksSort.unshift(books[i]);
+
+    //             }
     //         }
     //     }
     // }
+
+    // const sortedReadListBookIds = readListedBooksSort.rating.sort(function (a, b) { return b - a });
+
+    // console.log(books[0])
+    // console.log(readListedBooksSort)
+    // console.log(sortedReadListBookIds)
     // for(const )
 
     // console.log(wishListedBooksSort)
@@ -125,17 +207,17 @@ const ListedBooks = () => {
                 <div className="dropdown w-40">
                     <div tabIndex={0} role="button" className="btn bg-[#23BE0A] text-white font-semibold flex justify-between"><p>Sort By:</p> <IoIosArrowDown /></div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li ><a>All</a></li>
-                        <li className="bg-white text-black"><button>Rating</button></li>
-                        <li className="bg-white text-black"><button>Number of Pages</button></li>
-                        <li className="bg-white text-black"><button>Published Year</button></li>
+                        <li onClick={() => handleSortByRating('all')} className="bg-white text-black"><button>All</button></li>
+                        <li onClick={() => handleSortByRating('rating')} className="bg-white text-black"><button>Rating</button></li>
+                        <li onClick={() => handleSortByRating('numberOfPages')} className="bg-white text-black"><button>Number of Pages</button></li>
+                        <li onClick={() => handleSortByRating('publishedYear')} className="bg-white text-black"><button>Published Year</button></li>
                     </ul>
                 </div>
             </div>
             {/* Listed Book */}
             <div role="tablist" className="tabs tabs-lifted">
 
-                <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Read Books" defaultChecked />
+                <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="ReadBooks" defaultChecked />
                 <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
                     {
                         displayReadListedBooks.map((book, idx) => <ListedBookSingle book={book} key={idx}></ListedBookSingle>)
@@ -143,10 +225,10 @@ const ListedBooks = () => {
 
                 </div>
 
-                <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Wishlist Books" />
+                <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="WishlistBooks" />
                 <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
                     {
-                        wishListedBooks.map((book, idx) => <ListedBookSingle book={book} key={idx}></ListedBookSingle>)
+                        displayWishListedBooks.map((book, idx) => <ListedBookSingle book={book} key={idx}></ListedBookSingle>)
                     }
                 </div>
 
